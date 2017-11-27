@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script type="text/javascript" src="../js/build/bundle.js"></script>
+</head>
+<body>
+    <form method="POST" action="/user">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" />
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" />
+        <input type="submit" value="Promises" onclick="this.form.target = 'promises'" />
+        <input type="submit" value="Generator" onclick="this.form.target = 'generator'" />
+        <input type="submit" value="AsyncAwait" onclick="this.form.target = 'async-await'" />
+    </form>
+</body>
+</html>
