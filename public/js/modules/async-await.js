@@ -39,16 +39,12 @@
         submitForm: function(postRequest, getRequest) {
             this.executeAsync(postRequest, getRequest)
                 .then(response => {
-                    let responseList = Object.getOwnPropertyNames(response).map(propertyName => {
-                        return response[propertyName];
-                    });
-
-                    if (responseList.length) {
-                        responseList.forEach(element => {
-                            if (element instanceof Error) {
-                                console.error(element);
+                    if (response) {
+                        for (let propertyName in response) {
+                            if (response[propertyName] instanceof Error) {
+                                console.error(response[propertyName]);
                             }
-                        });
+                        }
                     }
                 })
                 .catch(error => console.error('asyncError: ', error));
