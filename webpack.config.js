@@ -8,10 +8,5 @@ module.exports = {
     },
     module: {
         loaders: []
-    },
-    devServer: {
-        port: 9000,
-        contentBase: path.resolve(__dirname, 'public/js/build'),
-        inline: false
     }
 };

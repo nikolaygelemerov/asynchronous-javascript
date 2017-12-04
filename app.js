@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
+const reload = require('reload');
 
 const homeRoutes = require('./routes/home');
 const userRoutes = require('./routes/user');
@@ -24,5 +25,7 @@ app.use(function (req, res, next) {
 
 app.use('/', homeRoutes);
 app.use('/user', userRoutes);
+
+reload(app);
 
 app.listen(3000);
