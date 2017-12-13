@@ -30,8 +30,8 @@
 
                 http.onload = () => {
                     try {
-                        //resolve(JSON.parse(http.response));
-                        throw 'GET Error';
+                        resolve(JSON.parse(http.response));
+                        //throw 'GET Error';
                     }
                     catch (error) {
                         reject(error);
